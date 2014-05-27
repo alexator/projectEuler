@@ -4,15 +4,14 @@ $c = []
 
 def prime_factors(number)
 
-	a = number
-	b = 2
+	prime_factor = 2
 
-	if(a > 1)
-		while a % b != 0
-			b += 1
+	if(number > 1)
+		while number % prime_factor != 0
+			prime_factor += 1
 		end
-		$c << b
-		prime_factors(a / b)
+		$c << prime_factor
+		prime_factors(number / prime_factor)
 	end
 end
 
